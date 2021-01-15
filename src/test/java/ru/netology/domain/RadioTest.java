@@ -48,10 +48,10 @@ class RadioTest {
     @Test
     void shouldChangeOnPreviousRadioStation() {
         Radio radio = new Radio();
-        int currentRadioStation = 9;
+        int currentRadioStation = 1;
         radio.setCurrentRadioStation(currentRadioStation);
         radio.changeOnPreviousRadioStation();
-        int expected = 8;
+        int expected = 0;
         assertEquals(expected, radio.getCurrentRadioStation());
     }
 
