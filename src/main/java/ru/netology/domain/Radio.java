@@ -18,24 +18,25 @@ public class Radio {
         this.currentRadioStation = currentRadioStation;
     }
 
+
     public void changeOnPreviousRadioStation() {
         if (currentRadioStation > 0) {
             this.currentRadioStation--;
         }
-
         if (currentRadioStation == 0) {
             this.currentRadioStation = 9;
         }
     }
 
     public void changeOnNextRadioStation() {
-        if (currentRadioStation < 9) {
-            this.currentRadioStation++;
-        }
+
         if (currentRadioStation == 9) {
             this.currentRadioStation = 0;
+            return;
         }
+        this.currentRadioStation++;
     }
+
 
     public int getVolume() {
         return volume;
@@ -71,4 +72,3 @@ public class Radio {
     }
 
 }
-
